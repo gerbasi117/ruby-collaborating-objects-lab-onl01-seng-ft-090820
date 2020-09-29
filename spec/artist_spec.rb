@@ -20,14 +20,7 @@ describe 'Artist' do
     end
   end
 
-  describe '.all' do
-    it 'returns all existing Artist instances' do
-      artist = Artist.new('Michael Jackson')
-      expect(Artist.all).to eq([artist])
-      prince = Artist.new('Prince')
-      expect(Artist.all).to eq([artist, prince])
-    end
-  end
+ 
 
   describe '#add_song' do
     it 'keeps track of an artist\'s songs' do
@@ -73,15 +66,5 @@ describe 'Artist' do
     end
   end
 
-  describe '#print_songs' do
-    it 'lists all of the artist\'s songs' do
-      artist = Artist.new('Michael Jackson')
-      dirty_diana = Song.new("Dirty Diana")
-      billie_jean = Song.new("Billie Jean")
-      piano_man = Song.new("Piano Man")
-      artist.add_song(dirty_diana)
-      artist.add_song(billie_jean)
-      expect{artist.print_songs}.to output("Dirty Diana\nBillie Jean\n").to_stdout
-    end
-  end
+  
 end
